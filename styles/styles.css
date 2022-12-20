@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Lexend+Deca&display=swap");
+:root {
+  --orange-color:hsl(31,77%,52%);
+  --cyan-color: hsl(184,100%,22%);
+  --darkCyan-color:hsl(179,100%,13%);
+  --white-color:hsla(0,0%,100%,0.75);
+  --gray-color:hsl(0,0%,95%);
+}
+
+body {
+  background: var(--gray-color);
+}
+body main {
+  max-width: 90%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  background: var(--orange-color);
+  width: 340px;
+  max-width: 90%;
+  padding: 2.5rem;
+  box-sizing: border-box;
+}
+.card:first-child {
+  border-radius: 10px 10px 0 0;
+}
+.card:last-child {
+  border-radius: 0 0 10px 10px;
+}
+.card__icon {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.card__title {
+  color: var(--gray-color);
+  font-family: "Big Shoulders Display", cursive;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.card__parragraph {
+  color: var(--white-color);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+.card__btn {
+  background: var(--gray-color);
+  color: var(--orange-color);
+  font-family: "Lexend Deca", sans-serif;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 25px;
+  margin-bottom: 1.5rem;
+}
+.card__btn:hover {
+  outline: 1px solid var(--white-color);
+  color: var(--white-color);
+  background-color: transparent;
+}
+.card__btn--suvs {
+  color: var(--cyan-color);
+}
+.card__btn--luxury {
+  color: var(--darkCyan-color);
+}
+.card--suvs {
+  background: var(--cyan-color);
+}
+.card--luxury {
+  background: var(--darkCyan-color);
+}
+
+@media screen and (min-width: 992px) {
+  body main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  body main .card {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  body main .card__icon {
+    margin-bottom: 1rem;
+  }
+  body main .card__title {
+    margin-bottom: 1rem;
+  }
+  body main .card__parragraph {
+    padding-bottom: 3rem;
+  }
+  body main .card__btn {
+    padding: 1rem 3rem;
+    margin-bottom: 0;
+  }
+  body main .card:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+  body main .card:last-child {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
